@@ -25,12 +25,15 @@ export class ColectBeepRepository implements IColectBeepRepository {
       }*/
 
       const sql = `INSERT INTO ******(
-        EPC,
-        DATA,
+        reading_reader_ip,
+        reading_epc_hex,
+        reading_created_at,
         )        
         VALUES 
-        ('${data.epc}',
-        '${data.date}',
+        ('${data.reading_reader_ip}',
+        '${data.reading_epc_hex}',
+        '${data.reading_company_id}',
+        '${data.reading_created_at}',
         `;
 
       await knex.raw(sql);
