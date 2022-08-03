@@ -15,4 +15,4 @@ app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDoc));
 
 app.use(router);
 
-app.listen(3333, () => console.log('Server is running!'));
+app.listen(4000, () => console.log('Server is running > port 4000!'));

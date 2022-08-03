@@ -15,15 +15,6 @@ export class ColectBeepRepository implements IColectBeepRepository {
 
   async create(data: ColectBeep): Promise<void | Error> {
     try {
-      /*
-      let [result] = await knex.raw(
-        `SELECT cd_dti_beneficiario FROM dataintegra.tbl_dti_beneficiario WHERE cd_beneficiario = ${data.codigo_beneficiario}`,
-      );
-      console.log(result);
-      if (result) {
-        throw new Error('RegisteredAlreadyExists!');
-      }*/
-
       const sql = `INSERT INTO ******(
         reading_reader_ip,
         reading_epc_hex,
@@ -33,7 +24,7 @@ export class ColectBeepRepository implements IColectBeepRepository {
         ('${data.reading_reader_ip}',
         '${data.reading_epc_hex}',
         '${data.reading_company_id}',
-        '${data.reading_created_at}',
+        '${data.reading_created_at}',)
         `;
 
       await knex.raw(sql);
