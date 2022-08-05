@@ -20,12 +20,13 @@ export class ColectBeepRepository implements IColectBeepRepository {
 
     try {
       const sql = `
-        INSERT INTO ******(
-          reading_reader_ip,
-          reading_epc_hex,
-          reading_created_at,
-        )        
+                
         `;
+      // INSERT INTO ******(
+      //   reading_reader_ip,
+      //   reading_epc_hex,
+      //   reading_created_at,
+      // )
 
       const result = await knex.raw(sql);
 
